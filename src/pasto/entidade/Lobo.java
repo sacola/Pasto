@@ -30,7 +30,7 @@ public class Lobo implements Entidade {
     private static final int REPRODUCAO = 35;
     
     protected int tempoSemComida;
-    
+    	
     private void comer(){
     	for ( Entidade ser :
     	pasto.getEntidadesEm(pasto.getPosicaoEntidade(this))){
@@ -80,7 +80,7 @@ public class Lobo implements Entidade {
             
             if(neighbour != null) 
                 pasto.moveEntidade(this, neighbour);
-
+            tempoSemComida = 20;
             tempoParaMover = 10;
             comer();
             if(tempoSemComida==0) {
