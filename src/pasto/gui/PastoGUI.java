@@ -120,6 +120,8 @@ public class PastoGUI extends JFrame implements ActionListener {
      */
 
     public void adicionaEntidade(Entidade e, Point p) {
+    	if(p!=null) 
+    	{
         ImageIcon icon = e.getImagem();
 
         java.util.List<ImageIcon> l = icons.get(p);
@@ -134,6 +136,7 @@ public class PastoGUI extends JFrame implements ActionListener {
         grid[x][y].setIcon(icon);
         
         size++;
+    	}
     }
 
     public void moveEntity(Entidade e, Point old, Point ny) {
@@ -149,7 +152,7 @@ public class PastoGUI extends JFrame implements ActionListener {
 
 
     public void removeEntidade(Entidade e, Point p) {
-        
+        if(p!=null) {
         ImageIcon icon0 = e.getImagem();
 
         java.util.List<ImageIcon> l = icons.get(p);
@@ -164,6 +167,7 @@ public class PastoGUI extends JFrame implements ActionListener {
         grid[x][y].setIcon(icon);
         
         size--;
+        }
     }
 
     public void update() {
