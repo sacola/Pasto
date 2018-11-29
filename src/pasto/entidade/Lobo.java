@@ -36,7 +36,7 @@ public class Lobo implements Entidade {
     	pasto.getEntidadesEm(pasto.getPosicaoEntidade(this))){
     		if(ser instanceof Ovelha) {
     		pasto.removeEntidade(ser);
-    		tempoSemComida = 20;
+    		tempoSemComida = 800;
     		}
     	};
     }
@@ -83,6 +83,9 @@ public class Lobo implements Entidade {
 
             tempoParaMover = 10;
             comer();
+            if(tempoSemComida==0) {
+                pasto.removeEntidade(this);
+                }
         }	tempoParaNovaReproducao--;
         
         if(tempoParaNovaReproducao == 0) {      

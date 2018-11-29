@@ -38,7 +38,7 @@ public class Ovelha implements Entidade {
     	pasto.getEntidadesEm(pasto.getPosicaoEntidade(this))){
     		if(ser instanceof Planta) {
     		pasto.removeEntidade(ser);
-    		tempoSemComida = 20;
+    		tempoSemComida = 600;
     		}
     	};
     }
